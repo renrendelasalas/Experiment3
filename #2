@@ -1,0 +1,32 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+const int city = 2;
+const int week = 7;
+
+int main()
+{
+    int temperature[city][week];
+	cout <<"Enter temperature for a week of First city and then Second city. \n";
+
+	 for (int x = 0; x < city; ++x)
+    {
+        for(int y = 0; y < week; ++y)
+        {
+        	cout <<"City " << x + 1 << ", Day " << y + 1 << " : ";
+            cin >>temperature[x][y];
+        }
+    }
+
+    cout <<"\n\nDisplaying Values:\n";
+	for (int x = 0; x < city; ++x)
+    {
+        for(int y = 0; y < week; ++y)
+        {
+            cout <<"City " << x + 1 << ", Day " << y + 1 << " = " << temperature[x][y] << endl;
+        }
+    }
+	getch();
+    return 0;
+}
